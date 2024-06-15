@@ -1,0 +1,32 @@
+/*
+For divisor = 3 and bound = 10, the output should be
+solution(divisor, bound) = 9."
+
+Dado el divisor y una frontera, regresa el multiplo mas grande
+ */
+
+public class MaxMultiple {
+    public static void main(String[] args) {
+        System.out.println(solution(8,88));
+
+    }
+
+    public static int solution(int divisor, int bound) {
+
+        ///Los vas multiplicando hasta que sean menor a bound
+
+        int i = 1;
+        int resultado = 0;
+        int tmp =0;
+        while (tmp<bound){
+            
+            tmp = divisor*i;
+            i++;
+
+            if (tmp<=bound){
+                resultado = tmp;
+            }
+        }
+        return resultado;
+    }
+}
